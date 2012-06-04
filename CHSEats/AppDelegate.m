@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RestaurantController.h"
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,6 +23,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    RestaurantController *rc = [[RestaurantController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:rc];
+    [self.window addSubview:nc.view];
+    [rc release];
+    [nc release];
     [self.window makeKeyAndVisible];
     return YES;
 }
