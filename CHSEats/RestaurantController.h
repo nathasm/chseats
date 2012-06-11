@@ -12,8 +12,9 @@
 {
 @private
   NSArray *restaurants_;
+  UINavigationController *navigationController;
 }
 
-//@property (nonatomic, retain) NSArray *restaurants;
+@property (assign) UINavigationController *navigationController;
 
 @end

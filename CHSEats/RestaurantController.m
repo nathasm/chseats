@@ -7,11 +7,14 @@
 //
 
 #import "RestaurantController.h"
+#import "DetailViewController.h"
 
 @interface RestaurantController ()
 @end
 
 @implementation RestaurantController
+
+@synthesize navigationController;
 
 //@dynamic restaraunts;
 
@@ -19,17 +22,22 @@
 {
   self = [super initWithStyle:style];
   if (self) {
-    restaurants_ = [NSArray arrayWithObjects:@"Ted's", @"Dellz", @"Rue de Jean", @"Seasame", nil];
+    restaurants_ = [[NSArray alloc] initWithObjects:@"Ted's", @"Dellz", @"Rue de Jean", @"Seasame", nil];
     self.title = @"Charleston Restaurants";
   }
   return self;
 }
 
-//- (void)dealloc
-//{
-//    [restaurants_ release];
-//    [super dealloc];
-//}
+- (void)dealloc
+{
+    [restaurants_ release];
+    [super dealloc];
+}
+
+- (void)viewDidReceiveMemoryWarning
+{
+  [super viewDidReceiveMemoryWarning];
+}
 
 - (void)viewDidLoad
 {
@@ -70,13 +78,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  NSLog(@"tableView");
   static NSString *CellIdentifier = @"Cell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if(cell == nil)
   {
     cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+    [cell.textLabel setText:[restaurants_ objectAtIndex:indexPath.row]];
   }
-  [cell.textLabel setText:[restaurants_ objectAtIndex:indexPath.row]];
   
   return cell;
 }
@@ -124,14 +133,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  NSLog(@"didSelectRowAtIndexPath");
   // Navigation logic may go here. Create and push another view controller.
-  /*
-   <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-   // ...
-   // Pass the selected object to the new view controller.
-   [self.navigationController pushViewController:detailViewController animated:YES];
-   [detailViewController release];
-   */
+  DetailViewController *dvc = [[DetailViewController alloc] initWithNibName:nil bundle:nil];
+  dvc.title = [restaurants_ objectAtIndex:[indexPath row]];
+  [self.navigationController pushViewController:dvc animated:YES];
+  [dvc release];
+  
 }
 
 @end

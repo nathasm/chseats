@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAFB4AC31586A06B004B72E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB4AC21586A06B004B72E5 /* DetailViewController.m */; };
 		BAFCBED4157D6DDD006B2ECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFCBED3157D6DDD006B2ECC /* UIKit.framework */; };
 		BAFCBED6157D6DDD006B2ECC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFCBED5157D6DDD006B2ECC /* Foundation.framework */; };
 		BAFCBED8157D6DDD006B2ECC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFCBED7157D6DDD006B2ECC /* CoreGraphics.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAFB4AC11586A06B004B72E5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BAFB4AC21586A06B004B72E5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BAFCBECF157D6DDD006B2ECC /* CHSEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHSEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFCBED3157D6DDD006B2ECC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAFCBED5157D6DDD006B2ECC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +116,8 @@
 				BAFCBEE3157D6DDD006B2ECC /* AppDelegate.m */,
 				BAFCBF02157D6DFE006B2ECC /* RestaurantController.h */,
 				BAFCBF03157D6DFE006B2ECC /* RestaurantController.m */,
+				BAFB4AC11586A06B004B72E5 /* DetailViewController.h */,
+				BAFB4AC21586A06B004B72E5 /* DetailViewController.m */,
 				BAFCBEDA157D6DDD006B2ECC /* Supporting Files */,
 			);
 			path = CHSEats;
@@ -256,6 +261,7 @@
 				BAFCBEE0157D6DDD006B2ECC /* main.m in Sources */,
 				BAFCBEE4157D6DDD006B2ECC /* AppDelegate.m in Sources */,
 				BAFCBF04157D6DFE006B2ECC /* RestaurantController.m in Sources */,
+				BAFB4AC31586A06B004B72E5 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +421,7 @@
 				BAFCBEFE157D6DDD006B2ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAFCBEFF157D6DDD006B2ECC /* Build configuration list for PBXNativeTarget "CHSEatsTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +430,7 @@
 				BAFCBF01157D6DDD006B2ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
